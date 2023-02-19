@@ -187,7 +187,7 @@ function openPopup(assignment) {
         <label for="bs_responses" style="font-size: 12px">BS FRQs (puts random stuff): </label>
         <input type="checkbox" id="bs_responses" name="bs_responses" onchange="toggle('responses');">
         <br>
-        <input type="text" id="custom_answer" name="custom_answer" placeholder="Type a custom free-response answer (max 100 characters) here..." maxlength="100" oninput="toggle('responses')" hidden>"
+        <input type="text" id="custom_answer" name="custom_answer" placeholder="Type a custom free-response answer (max 100 characters) here..." maxlength="100" oninput="toggle('responses')" hidden>
       </div>
     </div>
   </div>
@@ -199,7 +199,7 @@ function openPopup(assignment) {
   <p style="font-size: 12px">Made by: <a target="_blank" href="https://github.com/ading2210">ading2210</a> on Github | Website: <a target="_blank" href="https://edpuzzle.hs.vc">edpuzzle.hs.vc</a> | Source code: <a target="_blank" href="https://github.com/ading2210/edpuzzle-answers">ading2210/edpuzzle-answers</a></p>
   <p style="font-size: 12px">Modified by <a target="_blank" href="https://github.com/BitComputer64">me</a> 💀</p>
   <p style="font-size: 12px">Licenced under the <a target="_blank" href="https://github.com/ading2210/edpuzzle-answers/blob/main/LICENSE">GNU GPL v3</a>. Do not reupload or redistribute without abiding by those terms.</p>`;
-  popup = window.open("about:blank", "", "width=600, height=400");
+  popup = window.open("about:blank", "", "width=800, height=400");
   popup.document.write(base_html);
 
   popup.document.assignment = assignment;
@@ -287,9 +287,9 @@ function parseQuestions(questions) {
         question_content = question.body[0].html;
       }
       for (let j=0; j<question.choices.length; j++) {
+        counter++;
         let choice = question.choices[j];
         if (typeof choice.body != "undefined") {
-          counter++;
           let item_html;
           if (choice.body[0].text != "") {
             item_html = `<p>${choice.body[0].text}</p>`;
