@@ -272,6 +272,7 @@ function parseQuestions(questions) {
     question = questions[i];
     let choices_lines = [];
     
+    counter++;
     if (typeof question.choices != "undefined") {
       let min = Math.floor(question.time/60).toString();
       let secs = Math.floor(question.time%60).toString();
@@ -287,7 +288,6 @@ function parseQuestions(questions) {
         question_content = question.body[0].html;
       }
       for (let j=0; j<question.choices.length; j++) {
-        counter++;
         let choice = question.choices[j];
         if (typeof choice.body != "undefined") {
           let item_html;
@@ -337,7 +337,7 @@ function parseQuestions(questions) {
     }
   }
   popup.document.getElementById("skipper").disabled = false;
-  if (counter == 0) {
+  if (counter2 == 0) {
     content.innerHTML += `<p style="font-size: 12px">No valid multiple choice questions were found.</p>`;
   }
   else {
