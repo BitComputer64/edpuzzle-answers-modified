@@ -156,7 +156,7 @@ function openPopup(assignment) {
   </head>
   <div id="header_div">
     <div>
-      <img src="${thumbnail}" height="108px">
+      <img src="${thumbnail}" height="108px" style="border: 6px solid #ffffff">
     </div>
     <div id="title_div">
       <p style="font-size: 16px"><b>${media.title}</b></h2>

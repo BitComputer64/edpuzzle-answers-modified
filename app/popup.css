@@ -2,11 +2,15 @@
 
 body {
   background-color: #02021a;
+  overflow: scroll;
 }
 * {
   font-family: 'Quicksand', sans-serif;
   line-height: 100%;
   color: #ffffff;
+}
+input[type="text"], input[type="button"], select {
+  background-color: #02021a;
 }
 ul {
   list-style: none;
