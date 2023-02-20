@@ -44,7 +44,6 @@ function toggle(type) {
       else answers_button.disabled = true;
 
     case "custom_response":
-      frq_answer.size = (frq_answer.value.length > 0) ? (frq_answer.value.length + 1) : 65;
       document.FRQAnswer = (frq_answer.value.trim() != "") ? frq_answer.value : "done";
     break;
   }

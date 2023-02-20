@@ -156,7 +156,7 @@ function openPopup(assignment) {
   </head>
   <div id="header_div">
     <div>
-      <img src="${thumbnail}" height="108px" style="border: 6px solid #ffffff">
+      <img src="${thumbnail}" height="108px" style="border: 4px solid #ffffff">
     </div>
     <div id="title_div">
       <p style="font-size: 16px"><b>${media.title}</b></h2>
@@ -187,7 +187,8 @@ function openPopup(assignment) {
         <label for="bs_responses" style="font-size: 12px">Answer FRQs: </label>
         <input type="checkbox" id="bs_responses" name="bs_responses" onchange="toggle('responses');">
       </div>
-      <input type="text" id="custom_answer" name="custom_answer" placeholder="Type a custom free-response answer (max 100 characters) here..." maxlength="100" oninput="toggle('custom_response')" size="65" hidden>
+      <br>
+      <textarea id="custom_answer" name="custom_answer" placeholder="Type a custom free-response answer (max 100 characters) here..." maxlength="100" oninput="toggle('custom_response')" cols=65 style="resize: none" hidden></textarea>
     </div>
   </div>
   <hr>

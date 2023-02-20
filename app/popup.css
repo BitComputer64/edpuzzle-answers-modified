@@ -9,7 +9,7 @@ body {
   line-height: 100%;
   color: #ffffff;
 }
-input[type="text"], select {
+textarea, select {
   background-color: #02021a;
 }
 input[type="button"]:enabled {
