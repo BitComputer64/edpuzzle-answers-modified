@@ -9,7 +9,16 @@ body {
   line-height: 100%;
   color: #ffffff;
 }
-input[type="text"], input[type="button"], select {
+input[type="text"], select {
+  background-color: #02021a;
+}
+input[type="button"]:enabled {
+  cursor: pointer;
+  background-color: #086375;
+  border: 2px solid #007ea7;
+}
+input[type="button"]:disabled {
+  cursor: not-allowed;
   background-color: #02021a;
 }
 ul {
