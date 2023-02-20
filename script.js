@@ -187,7 +187,7 @@ function openPopup(assignment) {
         <label for="bs_responses" style="font-size: 12px">BS FRQs (puts random stuff): </label>
         <input type="checkbox" id="bs_responses" name="bs_responses" onchange="toggle('responses');">
         <br>
-        <input type="text" id="custom_answer" name="custom_answer" placeholder="Type a custom free-response answer (max 100 characters) here..." maxlength="100" oninput="toggle('responses')" hidden>
+        <input type="text" id="custom_answer" name="custom_answer" placeholder="Type a custom free-response answer (max 100 characters) here..." maxlength="100" oninput="toggle('custom_response')" hidden>
       </div>
     </div>
   </div>
@@ -335,10 +335,11 @@ function parseQuestions(questions) {
     }
   }
   popup.document.getElementById("skipper").disabled = false;
-  if (questions.length == 0) {
+  if (counter2 == 0) {
     content.innerHTML += `<p style="font-size: 12px">No valid multiple choice questions were found.</p>`;
   }
-  else {
+  
+  if (questions.length != 0 && (popup.document.doFRQs || counter2 != 0)) {
     popup.document.getElementById("answers_button").disabled = false;
   }
   popup.questions = questions;

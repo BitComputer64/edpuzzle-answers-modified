@@ -1,6 +1,7 @@
 var unfocus_checkbox = document.getElementById("pause_on_focus");
 var frq_checkbox = document.getElementById("bs_responses");
 var frq_answer = document.getElementById("custom_answer");
+var answers_button = document.getElementById("answers_button");
 
 if (typeof opener.document.visibility_change != "undefined") {
   unfocus_checkbox.checked = opener.document.visibility_change
@@ -29,13 +30,21 @@ function toggle(type) {
       }
       opener.document.visibility_change = unfocus_checkbox.checked;
     break;
+
     case "responses":
-      opener.document.doFRQs = frq_checkbox.checked;
+      document.doFRQs = frq_checkbox.checked;
       if (frq_checkbox.checked) {
         frq_answer.hidden = false;
-        document.FRQAnswer = (frq_answer.value.trim() != "") ? frq_answer.value : "done";
       }
       else frq_answer.hidden = true;
+
+      if (document.questions.length != 0 && (frq_checkbox.checked || document.questions.filter(x => x.type == "multiple-choice").length != 0)) {
+        answers_button.disabled = false;
+      }
+      else answers_button.disabled = true;
+      
+    case "custom_response":
+      document.FRQAnswer = (frq_answer.value.trim() != "") ? frq_answer.value : "done";
     break;
   }
 }
