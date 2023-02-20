@@ -1,4 +1,4 @@
-// modified version of the original script found at https://edpuzzle.hs.vc
+// modified version of the original script found at https://edpuzzle.hs.vc by @ading2210 (https://www.github.com/ading2210)
 var popup = null;
 var base_url;
 if (typeof document.dev_env != "undefined") {
@@ -123,7 +123,8 @@ function openPopup(assignment) {
   <!DOCTYPE html>
   <head>
     <style>
-      * {font-family: Arial}
+      @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
+      * {font-family: 'Quicksand', sans-serif;}
     </style>
     <script>
       var base_url = "${base_url}";
@@ -151,7 +152,7 @@ function openPopup(assignment) {
       get_tag("script", base_url+"/app/videooptions.js");
       get_tag("script", base_url+"/app/videospeed.js");
     </script>
-    <title>Answers for: ${media.title}</title>
+    <title>Answers for EdPuzzle Assignment - "${media.title}"</title>
   </head>
   <div id="header_div">
     <div>
@@ -184,10 +185,10 @@ function openPopup(assignment) {
         <label for="pause_on_focus" style="font-size: 12px">Don't pause on unfocus: </label>
         <input type="checkbox" id="pause_on_focus" name="pause_on_focus" onchange="toggle('focus');">
         <br>
-        <label for="bs_responses" style="font-size: 12px">BS FRQs (puts random stuff): </label>
+        <label for="bs_responses" style="font-size: 12px">Answer FRQs: </label>
         <input type="checkbox" id="bs_responses" name="bs_responses" onchange="toggle('responses');">
         <br>
-        <input type="text" id="custom_answer" name="custom_answer" placeholder="Type a custom free-response answer (max 100 characters) here..." maxlength="100" oninput="toggle('custom_response')" hidden>
+        <input type="text" id="custom_answer" name="custom_answer" placeholder="Type a custom free-response answer (max 100 characters) here..." maxlength="100" oninput="toggle('custom_response')" size="65" hidden>
       </div>
     </div>
   </div>

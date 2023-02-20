@@ -1,6 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
+
+body {
+  background-color: #02021a;
+}
 * {
-  font-family: Arial;
+  font-family: 'Quicksand', sans-serif;
   line-height: 100%;
+  color: #ffffff;
+}
+ul {
+  list-style: none;
 }
 li {
   font-size: 12px;
@@ -25,7 +34,7 @@ li {
 }
 .choice > * {
   margin-top: 0px;
-  magrin-bottom: 0px;
+  margin-bottom: 0px;
 }
 .choice-correct > * {
   text-decoration-line: underline;

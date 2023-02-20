@@ -60,7 +60,7 @@ function skipVideo(csrf, attempt) {
     
     for (let i=0; i<document.questions.length; i++) {
       let question = document.questions[i];
-      if (question.type != "multiple-choice" && !document.doFRQs) continue;
+      if (question.type != "multiple-choice" && !(document.doFRQs && question.type == "open-ended")) continue;
       
       if (filteredQuestions.length == 0) {
         filteredQuestions.push([question]);
