@@ -184,12 +184,10 @@ function openPopup(assignment) {
       <div id="options_container">
         <label for="pause_on_focus" style="font-size: 12px">Don't pause on unfocus: </label>
         <input type="checkbox" id="pause_on_focus" name="pause_on_focus" onchange="toggle('focus');">
-        <br>
         <label for="bs_responses" style="font-size: 12px">Answer FRQs: </label>
         <input type="checkbox" id="bs_responses" name="bs_responses" onchange="toggle('responses');">
-        <br>
-        <input type="text" id="custom_answer" name="custom_answer" placeholder="Type a custom free-response answer (max 100 characters) here..." maxlength="100" oninput="toggle('custom_response')" size="65" hidden>
       </div>
+      <input type="text" id="custom_answer" name="custom_answer" placeholder="Type a custom free-response answer (max 100 characters) here..." maxlength="100" oninput="toggle('custom_response')" size="65" hidden>
     </div>
   </div>
   <hr>
